@@ -1,4 +1,9 @@
-# Django / Python stuff
+# JavaScript / React and Django / Python stuff
 env/
 *.pyc
 *.sqlite3
+*.pycache
+
+*./static/myapp/main.js
+node_modules
+build
