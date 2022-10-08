@@ -12,6 +12,14 @@ module.exports = {
     path: path.resolve(__dirname, "../backend/myapp/static/myapp/build/"),
     filename: "[name].js",
   },
+  // Tell Webpack to use Babel for compiling JavaScrip files, except for node_modules
+  module: {
+    rules: [{
+      test: "/\.js$/",
+      exlcude: "/node_modules/",
+      use: ["babel-loader"]
+    }]
+  },
   plugins: [
     // Don't output new files if there is an error
     new webpack.NoEmitOnErrorsPlugin(),
