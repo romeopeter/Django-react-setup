@@ -1,6 +1,7 @@
 // frontend/webpack.config.js
 const path = require("path");
 const webpack = require("webpack");
+
 module.exports = {
   // Where Webpack looks to load your JavaScript
   entry: {
@@ -15,8 +16,8 @@ module.exports = {
   // Tell Webpack to use Babel for compiling JavaScrip files, except for node_modules
   module: {
     rules: [{
-      test: "/\.js$/",
-      exlcude: "/node_modules/",
+      test: /\.js$/,
+      exclude: /node_modules/,
       use: ["babel-loader"]
     }]
   },
